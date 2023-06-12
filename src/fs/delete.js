@@ -6,7 +6,7 @@ import { dirname } from 'path'
 const remove = async () => {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);
-    const src = path.join(__dirname, "files/fileToRead.txt");
+    const src = path.join(__dirname, "files/fileToRemove.txt");
 
     fs.unlink(src, function (err) {
         if (err) throw new Error('FS operation failed');
