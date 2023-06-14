@@ -1,5 +1,13 @@
+const regex = /--.+/g
+
 const parseArgs = () => {
-    // Write your code here 
+    const arr = process.argv;
+
+    arr.forEach((el, i) => {
+        if (!el.match(regex)) return;
+
+        console.log(`${el.slice(2)} is ${arr[i+1]}`);
+    })
 };
 
 parseArgs();
