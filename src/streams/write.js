@@ -16,7 +16,6 @@ const write = async () => {
         const output = fs.createWriteStream(src);
 
         stdin.on('data', data => {
-            const text = data.toString();
             if (data.toString().match('exit')) {process.exit()}
             output.write(data)
         });
